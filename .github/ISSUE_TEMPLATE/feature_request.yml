@@ -1,0 +1,37 @@
+name: Feature request
+description: Proponer una mejora o nueva funcionalidad
+title: "[FEATURE] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por proponer mejoras para Organigramix.
+
+  - type: input
+    id: problem
+    attributes:
+      label: Problema a resolver
+      placeholder: ¿Qué necesidad existe hoy?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta
+      description: Describe la solución sugerida
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: Otras opciones evaluadas
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto esperado
+      description: Cómo mejora UX, mantenibilidad o rendimiento

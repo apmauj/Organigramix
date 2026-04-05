@@ -1,0 +1,55 @@
+name: Bug report
+description: Reportar un fallo en la aplicación
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar este problema.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumen
+      placeholder: Describe el bug en una línea
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      description: Detalla los pasos exactos
+      placeholder: |
+        1. Ir a...
+        2. Hacer click en...
+        3. Ver error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamiento actual
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Navegador y versión
+      placeholder: Ej. Chrome 135 / Firefox 126
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia adicional
+      description: Capturas, logs o contexto extra
