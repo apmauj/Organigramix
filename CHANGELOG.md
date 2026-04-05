@@ -4,6 +4,30 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 Este formato está inspirado en Keep a Changelog y versionado semántico.
 
+## [0.4.0] - 2026-04-05
+
+### Added
+
+- Flujo de impresión optimizada con `Ctrl + P` usando `window.print()`
+- Opción `Imprimir` en el menú de engranaje
+- Preparación temporal de impresión (centrado, recorte al área ocupada y cleanup automático)
+- CSS dinámico de impresión inyectado en tiempo de ejecución
+- Modo de impresión adaptativo para organigramas grandes (45+ nodos visibles)
+
+### Changed
+
+- Impresión en orientación apaisada sugerida por defecto (`@page size: landscape`)
+- Mejoras de contraste y legibilidad en nodos/conectores durante impresión
+- Centrado horizontal del bloque impreso
+- Eliminación de marco/título auxiliares para una salida de impresión limpia
+
+### Fixed
+
+- Eliminada hoja en blanco extra al imprimir en algunos escenarios
+- Eliminados fondos de grilla durante impresión
+- Corrección de doble escalado en preview (contenido salía demasiado pequeño)
+- Ajustes de espaciado para evitar desalineación visual en márgenes
+
 ## [0.3.0] - 2026-04-05
 
 ### Added

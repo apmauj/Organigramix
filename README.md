@@ -14,6 +14,7 @@ Permite crear, editar y exportar estructuras jerárquicas de manera rápida, sin
 - Copiar y pegar nodos con portapapeles interno
 - Movimiento grupal de nodos seleccionados
 - Tooltips contextuales con información jerárquica
+- Impresión optimizada del organigrama (HTML nativo)
 - Gestión de roles y jerarquías
 - Colapsar y expandir ramas
 - Buscador de personas y filtros rápidos
@@ -57,6 +58,7 @@ Opcional (recomendado para desarrollo): usar un servidor estático local.
 - `Escape`: limpia toda la selección actual.
 - `Ctrl + C`: copia los nodos seleccionados al portapapeles interno.
 - `Ctrl + V`: abre modal de pegado (`raíz` o `bajo nodo`, cuando hay un único nodo seleccionado).
+- `Ctrl + P`: abre impresión optimizada con el diálogo nativo del navegador.
 - `Delete`: elimina toda la selección (con confirmación en casos de mayor impacto).
 
 Notas de comportamiento:
@@ -73,6 +75,14 @@ Notas de comportamiento:
 - Incluyen datos del nodo (nombre, área, rol) y resumen jerárquico (padre, subordinados, descendientes, estado contraído).
 - No aparecen durante arrastre, edición inline del nombre, ni sobre botones internos del nodo.
 - Se posicionan sobre el nodo con ajuste automático para no salirse de la ventana visible.
+
+## Impresión
+
+- Disponible con `Ctrl + P` y desde el menú de engranaje (`Imprimir`).
+- Usa impresión HTML nativa del navegador (no `html2canvas`), para mejor nitidez y texto seleccionable.
+- Oculta controles de edición (toolbar, sidebar, minimapa, toasts) durante impresión.
+- Ajusta temporalmente el área visible para centrar el organigrama en la hoja.
+- Para organigramas grandes, activa un modo de impresión adaptativo para mantener legibilidad.
 
 ## Publicación
 
