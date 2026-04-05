@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructor de Organigramas</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<header id="toolbar">
+  <button class="btn" id="btnSb" title="Panel lateral"><i class="fa-solid fa-bars"></i></button>
+  <div class="tb-logo"><i class="fa-solid fa-diagram-project"></i><span>Organigramix</span></div>
+  <div class="tb-sep"></div>
+  <div class="sw">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="sIn" placeholder="Buscar persona...">
+    <div id="sDrop" class="sdrop hid"></div>
+  </div>
+  <div class="tb-sep"></div>
+  <div class="tb-c">
+    <button class="btn" id="btnUn" disabled title="Deshacer (Ctrl+Z)"><i class="fa-solid fa-rotate-left"></i></button>
+    <button class="btn" id="btnRe" disabled title="Rehacer (Ctrl+Y)"><i class="fa-solid fa-rotate-right"></i></button>
+    <div class="tb-sep"></div>
+    <button class="btn btn-a" id="btnAdd"><i class="fa-solid fa-user-plus"></i><span class="lb"> Agregar</span></button>
+    <button class="btn" id="btnTheme" title="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+    <button class="btn" id="btnLk" title="Bloquear layout"><i class="fa-solid fa-lock-open"></i></button>
+    <button class="btn" id="btnGr" title="Cuadrícula"><i class="fa-solid fa-border-all"></i></button>
+    <button class="btn" id="btnSo" title="Auto-ordenar"><i class="fa-solid fa-sitemap"></i></button>
+    <div class="tb-sep"></div>
+    <button class="btn" id="btnZM" title="Reducir zoom"><i class="fa-solid fa-minus"></i></button>
+    <span id="zLbl" class="z-lbl">100%</span>
+    <button class="btn" id="btnZO" title="Aumentar zoom"><i class="fa-solid fa-plus"></i></button>
+    <button class="btn" id="btnZF" title="Ajustar a la vista"><i class="fa-solid fa-expand"></i></button>
+  </div>
+  <div class="tb-sep"></div>
+  <div class="tb-r">
+    <button class="btn" id="btnGear" title="Exportar / Importar"><i class="fa-solid fa-gear"></i></button>
+    <div id="gearDrop" class="gdrop hid">
+      <button class="gdi" id="btnPng"><i class="fa-solid fa-image"></i> Descargar PNG</button>
+      <button class="gdi" id="btnHtm"><i class="fa-solid fa-code"></i> Exportar HTML</button>
+      <button class="gdi" id="btnJE"><i class="fa-solid fa-file-export"></i> Exportar JSON</button>
+      <button class="gdi" id="btnJI"><i class="fa-solid fa-file-import"></i> Importar JSON</button>
+    </div>
+  </div>
+</header>
+
+<aside id="sidebar">
+  <div class="st">
+    <button class="stb on" data-t="people">Personas</button>
+    <button class="stb" data-t="roles">Jerarquía</button>
+    <button class="stb" data-t="props">Propiedades</button>
+  </div>
+  <div class="sb">
+    <div class="sp on" id="p-people"><div class="pt">Equipo</div><div id="pList"></div></div>
+    <div class="sp" id="p-roles">
+      <div class="pt">Niveles jerárquicos</div>
+      <div class="ps">Agregar rol</div>
+      <div class="ar">
+        <input type="text" class="fi" id="nrN" placeholder="Nombre">
+        <input type="number" class="fi lv" id="nrL" placeholder="Nv" min="1" value="1">
+        <button class="btn bs btn-a" id="nrA"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <div id="rList"></div>
+    </div>
+    <div class="sp" id="p-props"><div id="prC"></div></div>
+  </div>
+</aside>
+
+<div id="cw">
+  <div id="zwrap">
+    <div id="board" class="gon">
+      <svg id="asvg">
+        <defs>
+          <marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#3d4f65"/></marker>
+          <marker id="ahl" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e8913a"/></marker>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div id="mmW"><canvas id="mm" width="190" height="130"></canvas></div>
+<div id="mov" class="hid"><div id="mdl"></div></div>
+<div id="toasts"></div>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
