@@ -4,6 +4,24 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 Este formato está inspirado en Keep a Changelog y versionado semántico.
 
+## [0.3.0] - 2026-04-05
+
+### Added
+
+- Tooltips contextuales en nodos con delay de hover (~400ms)
+- Contenido de tooltip con datos del nodo y métricas jerárquicas
+- Reposicionamiento dinámico del tooltip para mantenerlo dentro del viewport
+- Transición suave al cambiar de nodo con tooltip visible
+
+### Fixed
+
+- La tecla `Shift` ya no dispara lógica de selección cuando el nombre del nodo está en edición inline
+- El tooltip se oculta correctamente en estados incompatibles (drag, modal abierto y edición inline)
+
+### Changed
+
+- README actualizado con documentación de tooltips y comportamiento asociado
+
 ## [0.2.0] - 2026-04-05
 
 ### Added

@@ -13,6 +13,7 @@ Permite crear, editar y exportar estructuras jerárquicas de manera rápida, sin
 - Selección múltiple con Shift + click
 - Copiar y pegar nodos con portapapeles interno
 - Movimiento grupal de nodos seleccionados
+- Tooltips contextuales con información jerárquica
 - Gestión de roles y jerarquías
 - Colapsar y expandir ramas
 - Buscador de personas y filtros rápidos
@@ -65,6 +66,13 @@ Notas de comportamiento:
 - Al pegar, cada nodo recibe nuevo ID y nombre con sufijo ` (copia)`, ` (copia 2)`, etc.
 - Si se pega bajo un nodo colapsado, ese nodo se expande automáticamente.
 - Si hay varios nodos seleccionados, arrastrar uno mueve el grupo completo manteniendo sus distancias relativas.
+
+## Tooltips de nodo
+
+- Se muestran al mantener el mouse quieto sobre un nodo por ~400ms.
+- Incluyen datos del nodo (nombre, área, rol) y resumen jerárquico (padre, subordinados, descendientes, estado contraído).
+- No aparecen durante arrastre, edición inline del nombre, ni sobre botones internos del nodo.
+- Se posicionan sobre el nodo con ajuste automático para no salirse de la ventana visible.
 
 ## Publicación
 
