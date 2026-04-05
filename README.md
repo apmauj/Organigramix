@@ -1,5 +1,9 @@
 # Organigramix
 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?style=flat-square&logo=javascript&logoColor=000000)
+![HTML5](https://img.shields.io/badge/HTML5-Markup-E34F26?style=flat-square&logo=html5&logoColor=ffffff)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?style=flat-square&logo=css3&logoColor=ffffff)
+
 Organigramix es un constructor visual de organigramas hecho con HTML, CSS y JavaScript vanilla.
 Permite crear, editar y exportar estructuras jerárquicas de manera rápida, sin dependencias de build.
 
@@ -110,4 +114,4 @@ El proyecto está preparado para GitHub Pages usando `main` + `/ (root)`.
 
 ## Licencia
 
-Pendiente de definir.
+MIT - ver [LICENSE](LICENSE).
