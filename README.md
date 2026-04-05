@@ -10,6 +10,9 @@ Permite crear, editar y exportar estructuras jerárquicas de manera rápida, sin
 ## Características
 
 - Edición visual de nodos (drag and drop)
+- Selección múltiple con Shift + click
+- Copiar y pegar nodos con portapapeles interno
+- Movimiento grupal de nodos seleccionados
 - Gestión de roles y jerarquías
 - Colapsar y expandir ramas
 - Buscador de personas y filtros rápidos
@@ -46,6 +49,22 @@ No requiere instalación de dependencias.
 2. Abrir `index.html` en el navegador.
 
 Opcional (recomendado para desarrollo): usar un servidor estático local.
+
+## Atajos y comportamiento de selección
+
+- `Shift + click`: agrega o quita nodos de la selección múltiple.
+- `Escape`: limpia toda la selección actual.
+- `Ctrl + C`: copia los nodos seleccionados al portapapeles interno.
+- `Ctrl + V`: abre modal de pegado (`raíz` o `bajo nodo`, cuando hay un único nodo seleccionado).
+- `Delete`: elimina toda la selección (con confirmación en casos de mayor impacto).
+
+Notas de comportamiento:
+
+- No se permite seleccionar simultáneamente un nodo con sus ancestros o descendientes.
+- El copiado es plano: no incluye hijos, solo los nodos seleccionados.
+- Al pegar, cada nodo recibe nuevo ID y nombre con sufijo ` (copia)`, ` (copia 2)`, etc.
+- Si se pega bajo un nodo colapsado, ese nodo se expande automáticamente.
+- Si hay varios nodos seleccionados, arrastrar uno mueve el grupo completo manteniendo sus distancias relativas.
 
 ## Publicación
 

@@ -81,8 +81,10 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
 .awl{fill:none;stroke:var(--arrow);stroke-width:2}.awl.hl{stroke:var(--arrow-hl);stroke-width:2.5}
 .nd{position:absolute;width:var(--nw);background:var(--card);border:1.5px solid var(--bdr);border-radius:10px;z-index:10;cursor:grab;transition:box-shadow .2s,border-color .2s;user-select:none}
 .nd:hover{border-color:var(--bdrl);box-shadow:var(--shadow-sm);z-index:15}
-.nd.sel{border-color:var(--acc);box-shadow:0 0 0 3px var(--accg),var(--shadow-sm);z-index:20}
+.nd.sel{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.22),0 0 18px rgba(59,130,246,.28),var(--shadow-sm);z-index:20}
+.nd.sel-hint{border-color:rgba(59,130,246,.58);box-shadow:0 0 0 2px rgba(59,130,246,.14)}
 .nd.drg{cursor:grabbing;z-index:30;box-shadow:var(--shadow-lg);transform:scale(1.03)}
+.nd.grp-drg{opacity:.7;transform:none!important}
 .nd.lk{cursor:default}.nd.lk:hover{box-shadow:none;border-color:var(--bdr)}
 .nd.anm{transition:left .5s cubic-bezier(.4,0,.2,1),top .5s cubic-bezier(.4,0,.2,1),box-shadow .2s,border-color .2s}
 .nd.srh{animation:srp 1.2s ease-in-out infinite}
